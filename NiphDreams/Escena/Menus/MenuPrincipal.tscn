@@ -1,0 +1,83 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://IMG/Menu principal.jpg" type="Texture" id=1]
+[ext_resource path="res://Font/Baldur.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Escena/Menus/MenuPrincipal.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 6
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxLine" id=3]
+color = Color( 0.682353, 0.647059, 0.647059, 1 )
+
+[node name="MenuPrincipal" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+
+[node name="IMG_Fondo" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="Titulo" type="Label" parent="."]
+anchor_left = 0.244
+anchor_right = 0.794
+anchor_bottom = 0.317
+margin_left = -0.0800018
+margin_top = -2.0
+margin_right = -0.0800171
+margin_bottom = -0.0600014
+custom_fonts/font = SubResource( 1 )
+text = "NipDream"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.397
+anchor_top = 0.4
+anchor_right = 0.609
+anchor_bottom = 0.794
+margin_left = -0.0400085
+margin_right = 0.119995
+margin_bottom = 0.0800018
+
+[node name="NuevaPartida" type="Button" parent="VBoxContainer"]
+margin_right = 68.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+text = "Nueva Partida"
+
+[node name="CargarPartidas" type="Button" parent="VBoxContainer"]
+margin_top = 18.0
+margin_right = 68.0
+margin_bottom = 32.0
+custom_fonts/font = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+text = "Cargar Partidas"
+
+[node name="Ajustes" type="Button" parent="VBoxContainer"]
+margin_top = 36.0
+margin_right = 68.0
+margin_bottom = 50.0
+custom_fonts/font = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+text = "Ajustes"
+
+[node name="Salir" type="Button" parent="VBoxContainer"]
+margin_top = 54.0
+margin_right = 68.0
+margin_bottom = 68.0
+custom_fonts/font = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+text = "Salir"
+
+[connection signal="pressed" from="VBoxContainer/NuevaPartida" to="." method="_on_NuevaPartida_pressed"]
+[connection signal="pressed" from="VBoxContainer/CargarPartidas" to="." method="_on_CargarPartidas_pressed"]
+[connection signal="pressed" from="VBoxContainer/Ajustes" to="." method="_on_Ajustes_pressed"]
+[connection signal="pressed" from="VBoxContainer/Salir" to="." method="_on_Salir_pressed"]
