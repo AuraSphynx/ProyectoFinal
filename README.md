@@ -5,6 +5,8 @@ Trabajo Final de FPGS Desarrollo de Aplicaciones Multiplataforma (D.A.M)
 
 1. Instalación
 
+    Buscar en la carpeta NiphDreams la carpeta Juego Ejecutable. Dentro hay un ejecutador llamado NiphDreams.exe, no hace falta instalarlo, solo se ejecuta el juego.
+    
 2. Documentación
 
 3. Sinopsis del Juego
