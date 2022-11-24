@@ -23,7 +23,7 @@ Trabajo Final de FPGS Desarrollo de Aplicaciones Multiplataforma (D.A.M)
     - Ajuste          -> Menu báico con el titulo y un boton para ir atras.
     - Salir           -> Botoón que a pulsarlo, cierra el juego.
   
-    4.2 V1.0.2
+   4.2 V1.0.1
     
     Esta versión añade:
   
@@ -32,6 +32,19 @@ Trabajo Final de FPGS Desarrollo de Aplicaciones Multiplataforma (D.A.M)
     Esta versión modifica:
   
     - icon.png  -> pequeña imagen icon no definitivo para usarlo de ejemplo.
+
+    4.3 V1.0.2
+    
+    Esta versión añade:
+  
+    - Colisiones del Personaje en el Primer Mapa (Pueblo).
+    - Menu de pausa.
+
+    Esta versión modifica:
+  
+    - Carpeta Juego Exportado  -> Carpeta con el nombre no definitivo que esta el ejecutador del juego llamado NiphDreamsV1.0.2.exe.
+    - Menu Principal -> Abajo a la izquierda se muestra la versión que esta actualmente.
+
     
 5. Desarrollador
 
