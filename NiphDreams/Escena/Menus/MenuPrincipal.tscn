@@ -94,7 +94,7 @@ margin_top = -0.0800018
 margin_right = -0.0800018
 margin_bottom = 0.0800018
 custom_fonts/font = SubResource( 5 )
-text = "Version 1.0.2"
+text = "Version 1.1.0"
 
 [connection signal="pressed" from="VBoxContainer/NuevaPartida" to="." method="_on_NuevaPartida_pressed"]
 [connection signal="pressed" from="VBoxContainer/CargarPartidas" to="." method="_on_CargarPartidas_pressed"]

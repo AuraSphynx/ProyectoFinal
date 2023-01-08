@@ -36,6 +36,7 @@ func _process(_delta):
 	
 	position += movimiento * _delta
 
+# Las coliciones
 
 func coliciones():
 	if $arriba.is_colliding():

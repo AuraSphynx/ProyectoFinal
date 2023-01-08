@@ -8,5 +8,3 @@ func _input(event: InputEvent) -> void:
 
 func _on_Salir_pressed():
 	get_tree().change_scene("res://Escena/Menus/MenuPrincipal.tscn")
-
-
