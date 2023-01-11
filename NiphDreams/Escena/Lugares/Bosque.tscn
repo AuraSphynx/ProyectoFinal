@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Escena/Personajes/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://TileMaps/Objects/Floor.png" type="Texture" id=2]
 [ext_resource path="res://TileMaps/Objects/Tree0.png" type="Texture" id=3]
+[ext_resource path="res://Escena/Script/SalidaBosque.gd" type="Script" id=4]
 [ext_resource path="res://TileMaps/Objects/Door1.png" type="Texture" id=5]
 
 [sub_resource type="TileSet" id=1]
@@ -249,6 +250,9 @@
 2/shapes = [  ]
 2/z_index = 0
 
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 25.25, 7.125 )
+
 [node name="Bosque" type="Node2D"]
 
 [node name="Suelos" type="TileMap" parent="."]
@@ -273,3 +277,12 @@ format = 1
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( -2, -72 )
+
+[node name="SalidaBosque" type="Area2D" parent="."]
+script = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SalidaBosque"]
+position = Vector2( -3, -103 )
+shape = SubResource( 4 )
+
+[connection signal="body_entered" from="SalidaBosque" to="SalidaBosque" method="_on_SalidaBosque_body_entered"]

@@ -980,7 +980,7 @@ extents = Vector2( 8.625, 8.1875 )
 extents = Vector2( 14, 14.5 )
 
 [sub_resource type="RectangleShape2D" id=52]
-extents = Vector2( 8, 2.5 )
+extents = Vector2( 8, 5 )
 
 [sub_resource type="RectangleShape2D" id=53]
 extents = Vector2( 17, 16.25 )
@@ -1107,6 +1107,10 @@ shape = SubResource( 8 )
 
 [node name="CollisionShape2D78" type="CollisionShape2D" parent="Colisiones/LimiteMapa"]
 position = Vector2( 248, 184 )
+shape = SubResource( 8 )
+
+[node name="CollisionShape2D83" type="CollisionShape2D" parent="Colisiones/LimiteMapa"]
+position = Vector2( 263, 184 )
 shape = SubResource( 8 )
 
 [node name="CollisionShape2D79" type="CollisionShape2D" parent="Colisiones/LimiteMapa"]
@@ -1381,10 +1385,6 @@ shape = SubResource( 59 )
 position = Vector2( 248, 128 )
 shape = SubResource( 59 )
 
-[node name="Bosque" type="StaticBody2D" parent="Colisiones"]
-
-[node name="Rocas" type="StaticBody2D" parent="Colisiones"]
-
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 215, 159 )
 
@@ -1417,7 +1417,7 @@ shape = SubResource( 51 )
 script = ExtResource( 10 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Entrada Bosque"]
-position = Vector2( -232, 123.5 )
+position = Vector2( -232, 121 )
 shape = SubResource( 52 )
 
 [node name="EntradaAldea2" type="Area2D" parent="."]
@@ -1426,9 +1426,6 @@ script = ExtResource( 11 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EntradaAldea2"]
 position = Vector2( -656, 144.25 )
 shape = SubResource( 53 )
-
-[node name="PosicionCentral" type="Position2D" parent="."]
-position = Vector2( 216, 169 )
 
 [connection signal="body_entered" from="EntradaPueblo" to="EntradaPueblo" method="_on_EntradaPueblo_body_entered"]
 [connection signal="body_entered" from="EntradaDungeon" to="EntradaDungeon" method="_on_EntradaDungeon_body_entered"]

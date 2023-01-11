@@ -2759,9 +2759,6 @@ position = Vector2( -563, 226 )
 shape = SubResource( 13 )
 
 [node name="Player" parent="." instance=ExtResource( 7 )]
-position = Vector2( 27, 53 )
-
-[node name="PosicionCentral" type="Position2D" parent="."]
-position = Vector2( -535, 225 )
+position = Vector2( 26, 51 )
 
 [connection signal="body_entered" from="SalirPueblo" to="SalirPueblo" method="_on_CambioEscena_body_entered"]

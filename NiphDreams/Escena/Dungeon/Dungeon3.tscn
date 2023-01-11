@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Escena/Personajes/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://TileMaps/Objects/Wall.png" type="Texture" id=2]
+[ext_resource path="res://Escena/Script/SalidaDungeon3.gd" type="Script" id=3]
 
 [sub_resource type="TileSet" id=1]
 0/name = "Wall.png 0"
@@ -33,6 +34,9 @@
 1/shapes = [  ]
 1/z_index = 0
 
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 16.4375, 7.5625 )
+
 [node name="Dungeon3" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -43,3 +47,12 @@ tile_data = PoolIntArray( -393252, 0, 0, -393251, 0, 0, -393250, 0, 0, -393249, 
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 513, 561 )
+
+[node name="SalidaDungeon3" type="Area2D" parent="."]
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SalidaDungeon3"]
+position = Vector2( 513, 584 )
+shape = SubResource( 2 )
+
+[connection signal="body_entered" from="SalidaDungeon3" to="SalidaDungeon3" method="_on_SalidaDungeon3_body_entered"]

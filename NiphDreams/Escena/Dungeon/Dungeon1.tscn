@@ -1,9 +1,7 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://TileMaps/Objects/Wall.png" type="Texture" id=1]
 [ext_resource path="res://TileMaps/Objects/Floor.png" type="Texture" id=2]
-[ext_resource path="res://Escena/Personajes/Player/Player.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Escena/Script/EntradaDungeon2.gd" type="Script" id=4]
 
 [sub_resource type="TileSet" id=2]
 0/name = "Floor.png 0"
@@ -219,12 +217,6 @@
 5/shapes = [  ]
 5/z_index = 0
 
-[sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 7.875, 7.625 )
-
-[sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 6.625, 6.5 )
-
 [node name="Dungeon" type="Node2D"]
 position = Vector2( 0, 389 )
 
@@ -246,22 +238,3 @@ tile_data = PoolIntArray( -2031602, 0, 0, -2031601, 3, 0, -2031600, 3, 0, -20315
 position = Vector2( 2, -4 )
 cell_size = Vector2( 16, 16 )
 format = 1
-
-[node name="Player" parent="." instance=ExtResource( 3 )]
-position = Vector2( 153, 160 )
-
-[node name="SalidaDungeon" type="Area2D" parent="."]
-position = Vector2( 188, 120 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SalidaDungeon"]
-position = Vector2( -34, 60 )
-shape = SubResource( 4 )
-
-[node name="EntradaDungeon2" type="Area2D" parent="."]
-script = ExtResource( 4 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EntradaDungeon2"]
-position = Vector2( 534, -396 )
-shape = SubResource( 3 )
-
-[connection signal="body_entered" from="EntradaDungeon2" to="EntradaDungeon2" method="_on_EntradaDungeon2_body_entered"]
