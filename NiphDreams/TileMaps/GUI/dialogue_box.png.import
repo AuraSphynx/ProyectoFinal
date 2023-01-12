@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/goblin.png-73b0361928b904a69a71506c9e17ec4a.stex"
+path="res://.import/dialogue_box.png-0f951b915491f5d9a298c87771f259a9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://TileMaps/Characters/goblin.png"
-dest_files=[ "res://.import/goblin.png-73b0361928b904a69a71506c9e17ec4a.stex" ]
+source_file="res://TileMaps/GUI/dialogue_box.png"
+dest_files=[ "res://.import/dialogue_box.png-0f951b915491f5d9a298c87771f259a9.stex" ]
 
 [params]
 

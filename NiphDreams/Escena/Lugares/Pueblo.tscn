@@ -1,4 +1,4 @@
-[gd_scene load_steps=84 format=2]
+[gd_scene load_steps=86 format=2]
 
 [ext_resource path="res://TileMaps/Objects/Door1.png" type="Texture" id=1]
 [ext_resource path="res://TileMaps/Objects/Decor0.png" type="Texture" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://TileMaps/Items/Chest0.png" type="Texture" id=13]
 [ext_resource path="res://TileMaps/Items/Music.png" type="Texture" id=14]
 [ext_resource path="res://TileMaps/Characters/Cat1.png" type="Texture" id=15]
+[ext_resource path="res://Escena/Personajes/Player/NPC.tscn" type="PackedScene" id=16]
 
 [sub_resource type="TileSet" id=1]
 0/name = "Floor.png 0"
@@ -1029,6 +1030,7 @@
 29/z_index = 0
 
 [sub_resource type="TileSet" id=3]
+resource_local_to_scene = true
 1/name = "Decor0.png 1"
 1/texture = ExtResource( 2 )
 1/tex_offset = Vector2( 0, 0 )
@@ -2009,6 +2011,9 @@ extents = Vector2( 66, 8 )
 [sub_resource type="RectangleShape2D" id=12]
 extents = Vector2( 80, 8 )
 
+[sub_resource type="CircleShape2D" id=69]
+radius = 7.07107
+
 [sub_resource type="RectangleShape2D" id=18]
 extents = Vector2( 64, 8 )
 
@@ -2130,7 +2135,7 @@ extents = Vector2( 23, 16 )
 extents = Vector2( 15.5, 24 )
 
 [sub_resource type="RectangleShape2D" id=47]
-extents = Vector2( 18.5, 8 )
+extents = Vector2( 17.75, 8 )
 
 [sub_resource type="RectangleShape2D" id=48]
 extents = Vector2( 34.5, 8 )
@@ -2139,7 +2144,7 @@ extents = Vector2( 34.5, 8 )
 extents = Vector2( 2, 104.5 )
 
 [sub_resource type="RectangleShape2D" id=50]
-extents = Vector2( 66, 8 )
+extents = Vector2( 66, 8.5 )
 
 [sub_resource type="RectangleShape2D" id=51]
 extents = Vector2( 16, 8 )
@@ -2237,6 +2242,78 @@ shape = SubResource( 11 )
 [node name="ColisionParedAbajo2" type="CollisionShape2D" parent="Colisiones/Posada"]
 position = Vector2( 240, 168 )
 shape = SubResource( 12 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Colisiones/Posada"]
+position = Vector2( 104, 136 )
+shape = SubResource( 69 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Colisiones/Posada"]
+position = Vector2( 71, 136 )
+shape = SubResource( 69 )
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="Colisiones/Posada"]
+position = Vector2( -168, 137 )
+shape = SubResource( 69 )
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="Colisiones/Posada"]
+position = Vector2( -136, 136 )
+shape = SubResource( 69 )
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="Colisiones/Posada"]
+position = Vector2( -152, 90 )
+shape = SubResource( 69 )
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="Colisiones/Posada"]
+position = Vector2( -184, 91 )
+shape = SubResource( 69 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Colisiones/Posada"]
+position = Vector2( 136, 122 )
+shape = SubResource( 69 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Colisiones/Posada"]
+position = Vector2( 167, 123 )
+shape = SubResource( 69 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Colisiones/Posada"]
+position = Vector2( 199, 107 )
+shape = SubResource( 69 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Colisiones/Posada"]
+position = Vector2( 200, 137 )
+shape = SubResource( 69 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Colisiones/Posada"]
+position = Vector2( 232, 106 )
+shape = SubResource( 69 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Colisiones/Posada"]
+position = Vector2( 232, 137 )
+shape = SubResource( 69 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Colisiones/Posada"]
+position = Vector2( 263, 106 )
+shape = SubResource( 69 )
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Colisiones/Posada"]
+position = Vector2( 296, 103 )
+shape = SubResource( 69 )
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Colisiones/Posada"]
+position = Vector2( 297, 136 )
+shape = SubResource( 69 )
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Colisiones/Posada"]
+position = Vector2( 263, 137 )
+shape = SubResource( 69 )
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Colisiones/Posada"]
+position = Vector2( 71, 57 )
+shape = SubResource( 69 )
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="Colisiones/Posada"]
+position = Vector2( 87, 41 )
+shape = SubResource( 69 )
 
 [node name="Casa1" type="StaticBody2D" parent="Colisiones"]
 
@@ -2527,25 +2604,26 @@ position = Vector2( -0.5, 392 )
 shape = SubResource( 68 )
 
 [node name="Establo" type="StaticBody2D" parent="Colisiones"]
+position = Vector2( 27, 30 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Colisiones/Establo"]
-position = Vector2( 280.5, 296 )
+position = Vector2( 252.75, 266 )
 shape = SubResource( 47 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Colisiones/Establo"]
-position = Vector2( 359.5, 296 )
+position = Vector2( 333, 266 )
 shape = SubResource( 48 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Colisiones/Establo"]
-position = Vector2( 264, 408.5 )
+position = Vector2( 237, 378 )
 shape = SubResource( 49 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Colisiones/Establo"]
-position = Vector2( 392, 408 )
+position = Vector2( 365, 378 )
 shape = SubResource( 49 )
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Colisiones/Establo"]
-position = Vector2( 328, 520 )
+position = Vector2( 301, 489.5 )
 shape = SubResource( 50 )
 
 [node name="Objeto" type="StaticBody2D" parent="Colisiones"]
@@ -2561,6 +2639,22 @@ shape = SubResource( 52 )
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="Colisiones/Objeto"]
 position = Vector2( 460, 118 )
+shape = SubResource( 52 )
+
+[node name="CollisionShape2D51" type="CollisionShape2D" parent="Colisiones/Objeto"]
+position = Vector2( 460, 104 )
+shape = SubResource( 52 )
+
+[node name="CollisionShape2D52" type="CollisionShape2D" parent="Colisiones/Objeto"]
+position = Vector2( 476, 119 )
+shape = SubResource( 52 )
+
+[node name="CollisionShape2D53" type="CollisionShape2D" parent="Colisiones/Objeto"]
+position = Vector2( 555, 296 )
+shape = SubResource( 52 )
+
+[node name="CollisionShape2D54" type="CollisionShape2D" parent="Colisiones/Objeto"]
+position = Vector2( 588, 297 )
 shape = SubResource( 52 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Colisiones/Objeto"]
@@ -2760,5 +2854,8 @@ shape = SubResource( 13 )
 
 [node name="Player" parent="." instance=ExtResource( 7 )]
 position = Vector2( 26, 51 )
+
+[node name="NPC" parent="." instance=ExtResource( 16 )]
+position = Vector2( 97, 107 )
 
 [connection signal="body_entered" from="SalirPueblo" to="SalirPueblo" method="_on_CambioEscena_body_entered"]
