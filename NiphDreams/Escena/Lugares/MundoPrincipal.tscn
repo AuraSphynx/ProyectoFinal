@@ -1,16 +1,12 @@
-[gd_scene load_steps=71 format=2]
+[gd_scene load_steps=61 format=2]
 
 [ext_resource path="res://TileMaps/Objects/Map0.png" type="Texture" id=1]
 [ext_resource path="res://Escena/Personajes/Player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://TileMaps/Objects/Floor.png" type="Texture" id=3]
 [ext_resource path="res://TileMaps/Objects/Hill0.png" type="Texture" id=4]
 [ext_resource path="res://TileMaps/Objects/Tree0.png" type="Texture" id=5]
-[ext_resource path="res://Escena/Script/EntradaPueblo.gd" type="Script" id=6]
-[ext_resource path="res://Escena/Script/EntradaDungeon.gd" type="Script" id=7]
+[ext_resource path="res://Escena/Menus/GUI.tscn" type="PackedScene" id=6]
 [ext_resource path="res://TileMaps/Objects/Pit1.png" type="Texture" id=8]
-[ext_resource path="res://Escena/Script/EntradaAldea.gd" type="Script" id=9]
-[ext_resource path="res://Escena/Script/Entrada Bosque.gd" type="Script" id=10]
-[ext_resource path="res://Escena/Script/EntradaAldea2.gd" type="Script" id=11]
 
 [sub_resource type="TileSet" id=2]
 0/name = "Floor.png 0"
@@ -967,24 +963,6 @@ extents = Vector2( 36, 6 )
 [sub_resource type="RectangleShape2D" id=59]
 extents = Vector2( 4, 18 )
 
-[sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 9, 16.5 )
-
-[sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 8.5, 15.5 )
-
-[sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 8.625, 8.1875 )
-
-[sub_resource type="RectangleShape2D" id=51]
-extents = Vector2( 14, 14.5 )
-
-[sub_resource type="RectangleShape2D" id=52]
-extents = Vector2( 8, 5 )
-
-[sub_resource type="RectangleShape2D" id=53]
-extents = Vector2( 17, 16.25 )
-
 [node name="MundoPrincipal" type="Node2D"]
 position = Vector2( 256, 256 )
 
@@ -1388,47 +1366,4 @@ shape = SubResource( 59 )
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 215, 159 )
 
-[node name="EntradaPueblo" type="Area2D" parent="."]
-script = ExtResource( 6 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EntradaPueblo"]
-position = Vector2( 232, 127.5 )
-shape = SubResource( 3 )
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="EntradaPueblo"]
-position = Vector2( 199.5, 128.5 )
-shape = SubResource( 4 )
-
-[node name="EntradaDungeon" type="Area2D" parent="."]
-script = ExtResource( 7 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EntradaDungeon"]
-position = Vector2( -537, -265 )
-shape = SubResource( 5 )
-
-[node name="EntradaAldea" type="Area2D" parent="."]
-script = ExtResource( 9 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EntradaAldea"]
-position = Vector2( -64, -47.5 )
-shape = SubResource( 51 )
-
-[node name="Entrada Bosque" type="Area2D" parent="."]
-script = ExtResource( 10 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Entrada Bosque"]
-position = Vector2( -232, 121 )
-shape = SubResource( 52 )
-
-[node name="EntradaAldea2" type="Area2D" parent="."]
-script = ExtResource( 11 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EntradaAldea2"]
-position = Vector2( -656, 144.25 )
-shape = SubResource( 53 )
-
-[connection signal="body_entered" from="EntradaPueblo" to="EntradaPueblo" method="_on_EntradaPueblo_body_entered"]
-[connection signal="body_entered" from="EntradaDungeon" to="EntradaDungeon" method="_on_EntradaDungeon_body_entered"]
-[connection signal="body_entered" from="EntradaAldea" to="EntradaAldea" method="_on_EntradaAldea_body_entered"]
-[connection signal="body_entered" from="Entrada Bosque" to="Entrada Bosque" method="_on_Entrada_Bosque_body_entered"]
-[connection signal="body_entered" from="EntradaAldea2" to="EntradaAldea2" method="_on_EntradaAldea2_body_entered"]
+[node name="GUI" parent="." instance=ExtResource( 6 )]

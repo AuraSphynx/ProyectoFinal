@@ -1,4 +1,4 @@
-[gd_scene load_steps=86 format=2]
+[gd_scene load_steps=102 format=2]
 
 [ext_resource path="res://TileMaps/Objects/Door1.png" type="Texture" id=1]
 [ext_resource path="res://TileMaps/Objects/Decor0.png" type="Texture" id=2]
@@ -15,7 +15,23 @@
 [ext_resource path="res://TileMaps/Items/Chest0.png" type="Texture" id=13]
 [ext_resource path="res://TileMaps/Items/Music.png" type="Texture" id=14]
 [ext_resource path="res://TileMaps/Characters/Cat1.png" type="Texture" id=15]
-[ext_resource path="res://Escena/Personajes/Player/NPC.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Escena/Menus/GUI.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Escena/Personajes/Player/NPC/Mirimi.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Escena/Personajes/Player/NPC/Alelo.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Escena/Personajes/Player/NPC/Eva.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Escena/Personajes/Player/NPC/Josete.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Escena/Personajes/Player/NPC/Lord.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Escena/Personajes/Player/NPC/Postpu.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Escena/Personajes/Player/NPC/Zack.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Escena/Personajes/Player/NPC/Meiga.tscn" type="PackedScene" id=24]
+[ext_resource path="res://Escena/Personajes/Player/NPC/Sphynxstein.tscn" type="PackedScene" id=25]
+[ext_resource path="res://Escena/Personajes/Player/NPC/Yabasrun.tscn" type="PackedScene" id=26]
+[ext_resource path="res://Escena/Personajes/Player/NPC/Glakag.tscn" type="PackedScene" id=27]
+[ext_resource path="res://Escena/Personajes/Player/NPC/Rensael.tscn" type="PackedScene" id=28]
+[ext_resource path="res://Escena/Personajes/Player/NPC/Ael.tscn" type="PackedScene" id=29]
+[ext_resource path="res://Escena/Personajes/Player/NPC/Houndeagle.tscn" type="PackedScene" id=30]
+[ext_resource path="res://Escena/Personajes/Player/NPC/Caballo.tscn" type="PackedScene" id=31]
+[ext_resource path="res://Escena/Personajes/Player/NPC/Gorper.tscn" type="PackedScene" id=32]
 
 [sub_resource type="TileSet" id=1]
 0/name = "Floor.png 0"
@@ -2843,6 +2859,8 @@ shape = SubResource( 61 )
 
 [node name="CollisionShape2D49" type="CollisionShape2D" parent="Colisiones/Objeto"]
 
+[node name="GUI" parent="." instance=ExtResource( 16 )]
+
 [node name="SalirPueblo" type="Area2D" parent="."]
 position = Vector2( 8, -2 )
 collision_layer = 0
@@ -2855,7 +2873,82 @@ shape = SubResource( 13 )
 [node name="Player" parent="." instance=ExtResource( 7 )]
 position = Vector2( 26, 51 )
 
-[node name="NPC" parent="." instance=ExtResource( 16 )]
-position = Vector2( 97, 107 )
+[node name="NPC_Posada" type="Node" parent="."]
+
+[node name="Eva" parent="NPC_Posada" instance=ExtResource( 19 )]
+position = Vector2( 72, 134 )
+
+[node name="Josete" parent="NPC_Posada" instance=ExtResource( 20 )]
+position = Vector2( 188, 54 )
+
+[node name="Lord" parent="NPC_Posada" instance=ExtResource( 21 )]
+position = Vector2( 232, 103 )
+
+[node name="Postpu" parent="NPC_Posada" instance=ExtResource( 22 )]
+position = Vector2( 201, 103 )
+
+[node name="Zack" parent="NPC_Posada" instance=ExtResource( 23 )]
+position = Vector2( 295, 134 )
+
+[node name="Meiga" parent="NPC_Posada" instance=ExtResource( 24 )]
+position = Vector2( 295, 65 )
+
+[node name="Mirimi" parent="NPC_Posada" instance=ExtResource( 17 )]
+position = Vector2( 103, 134 )
+
+[node name="NPC_Casa1" type="Node" parent="."]
+
+[node name="Yabasrun" parent="NPC_Casa1" instance=ExtResource( 26 )]
+position = Vector2( 540, 91 )
+
+[node name="Sphynxstein" parent="NPC_Casa1" instance=ExtResource( 25 )]
+position = Vector2( 489, 90 )
+
+[node name="NPC_Casa2" type="Node" parent="."]
+
+[node name="Rensael" parent="NPC_Casa2" instance=ExtResource( 28 )]
+position = Vector2( 472, 357 )
+
+[node name="Node2D" parent="NPC_Casa2" instance=ExtResource( 29 )]
+position = Vector2( 486, 302 )
+
+[node name="NPC_Casa3" type="Node" parent="."]
+
+[node name="Alelo" parent="NPC_Casa3" instance=ExtResource( 18 )]
+position = Vector2( -272, 69 )
+
+[node name="Glakag" parent="NPC_Casa3" instance=ExtResource( 27 )]
+position = Vector2( -223, 119 )
+
+[node name="NPC_Tienda" type="Node" parent="."]
+
+[node name="Houndeagle" parent="NPC_Tienda" instance=ExtResource( 30 )]
+position = Vector2( 144, 369 )
+
+[node name="NPC_Fuera_Casas" type="Node" parent="."]
+
+[node name="Caballo" parent="NPC_Fuera_Casas" instance=ExtResource( 31 )]
+position = Vector2( 362, 478 )
+
+[node name="Caballo2" parent="NPC_Fuera_Casas" instance=ExtResource( 31 )]
+position = Vector2( 363, 423 )
+
+[node name="Caballo3" parent="NPC_Fuera_Casas" instance=ExtResource( 31 )]
+position = Vector2( 317, 442 )
+
+[node name="Caballo4" parent="NPC_Fuera_Casas" instance=ExtResource( 31 )]
+position = Vector2( 299, 341 )
+
+[node name="Caballo5" parent="NPC_Fuera_Casas" instance=ExtResource( 31 )]
+position = Vector2( 351, 369 )
+
+[node name="Caballo6" parent="NPC_Fuera_Casas" instance=ExtResource( 31 )]
+position = Vector2( 292, 390 )
+
+[node name="Caballo7" parent="NPC_Fuera_Casas" instance=ExtResource( 31 )]
+position = Vector2( 291, 497 )
+
+[node name="Gorper" parent="NPC_Fuera_Casas" instance=ExtResource( 32 )]
+position = Vector2( -256, 307 )
 
 [connection signal="body_entered" from="SalirPueblo" to="SalirPueblo" method="_on_CambioEscena_body_entered"]
