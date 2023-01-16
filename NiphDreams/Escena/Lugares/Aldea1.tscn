@@ -1,6 +1,6 @@
-[gd_scene load_steps=43 format=2]
+[gd_scene load_steps=46 format=2]
 
-[ext_resource path="res://Escena/Personajes/Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Escena/Personajes/Player/Heroe.tscn" type="PackedScene" id=1]
 [ext_resource path="res://TileMaps/Objects/Wall.png" type="Texture" id=2]
 [ext_resource path="res://TileMaps/Objects/Door1.png" type="Texture" id=3]
 [ext_resource path="res://TileMaps/Objects/Hill1.png" type="Texture" id=4]
@@ -12,6 +12,9 @@
 [ext_resource path="res://Escena/Personajes/Player/NPC/Ranmus.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Escena/Personajes/Player/NPC/Dakthral.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Escena/Personajes/Player/NPC/Vabolg.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Escena/CambiasEscenas/Portal.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Escena/Personajes/Player/NPC/Nákhi.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Escena/Personajes/Player/NPC/Glúkhrish.tscn" type="PackedScene" id=15]
 
 [sub_resource type="TileSet" id=1]
 0/name = "Floor.png 0"
@@ -963,8 +966,8 @@ shape = SubResource( 5 )
 position = Vector2( 165.25, 537.5 )
 shape = SubResource( 6 )
 
-[node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 13, 512 )
+[node name="Heroe" parent="." groups=["Saved"] instance=ExtResource( 1 )]
+position = Vector2( 9, 508 )
 
 [node name="GUI" parent="." instance=ExtResource( 6 )]
 
@@ -976,14 +979,19 @@ position = Vector2( 178, 117 )
 [node name="Thiim" parent="NPC" instance=ExtResource( 9 )]
 position = Vector2( 148, 322 )
 
-[node name="Nákhi" parent="NPC" instance=ExtResource( 9 )]
+[node name="Nákhi" parent="NPC" instance=ExtResource( 14 )]
 position = Vector2( -180, 328 )
 
 [node name="Dakthral" parent="NPC" instance=ExtResource( 11 )]
 position = Vector2( -82, 126 )
 
-[node name="Glúkhrish" parent="NPC" instance=ExtResource( 11 )]
-position = Vector2( -106, 331 )
+[node name="Glúkhrish" parent="NPC" instance=ExtResource( 15 )]
+position = Vector2( -117, 314 )
 
 [node name="Vabolg" parent="NPC" instance=ExtResource( 12 )]
 position = Vector2( -173, 143 )
+
+[node name="MundoPrincipal" parent="." instance=ExtResource( 13 )]
+position = Vector2( 13, 544 )
+scale = Vector2( 3, 1 )
+escena = "MundoPrincipal"

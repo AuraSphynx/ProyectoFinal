@@ -7,9 +7,6 @@ func _ready():
 func _on_NuevaPartida_pressed():
 	get_tree().change_scene("res://Escena/Lugares/Pueblo.tscn")
 
-func _on_CargarPartidas_pressed():
-	get_tree().change_scene("res://Escena/Menus/MenuCargarPartidas.tscn")
-
 func _on_Ajustes_pressed():
 	get_tree().change_scene("res://Escena/Menus/MenuAjustes.tscn")
 

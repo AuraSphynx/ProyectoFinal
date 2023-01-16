@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-export (int) var health := 50
+export (int) var health := 200
 
 var speed = 25
 var motion = Vector2.ZERO
@@ -9,6 +9,9 @@ var player = null
 
 # Movimiento Automatico del enemigo al ver el personaje
 func _physics_process(delta):
+	
+	$Vida/ProgressBar.value = health / 2
+	
 	motion = Vector2.ZERO
 	if player:
 		motion = position.direction_to(player.position) * speed

@@ -1,0 +1,73 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://IMG/Menu principal.jpg" type="Texture" id=1]
+[ext_resource path="res://Font/Baldur.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Escena/Menus/EscenaFinal.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 41
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 6
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxLine" id=3]
+color = Color( 0.682353, 0.647059, 0.647059, 1 )
+
+[node name="EscenaFinal" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( -479, -94 )
+script = ExtResource( 3 )
+
+[node name="IMG_Fondo" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="Titulo" type="Label" parent="."]
+anchor_left = 0.056
+anchor_right = 0.919
+anchor_bottom = 0.3
+margin_left = 0.0799999
+margin_top = 2.0
+margin_right = -0.0800171
+custom_fonts/font = SubResource( 1 )
+text = "Gracias por jugar"
+
+[node name="Texto" type="Label" parent="."]
+margin_left = 12.0
+margin_top = 60.0
+margin_right = 313.0
+margin_bottom = 137.0
+custom_fonts/font = SubResource( 4 )
+text = "Juego Creado por : Belén María Camacho Ruiz
+Proyecto Final FPGS
+Centro: Itep
+Profesor: Francisco Javier Cárceles Moreno"
+
+[node name="VolverInicio" type="Button" parent="."]
+margin_left = 16.0
+margin_top = 155.0
+margin_right = 84.0
+margin_bottom = 169.0
+custom_fonts/font = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+text = "Volver a inicio"
+
+[node name="Salir" type="Button" parent="."]
+margin_left = 213.0
+margin_top = 154.0
+margin_right = 281.0
+margin_bottom = 168.0
+custom_fonts/font = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+text = "Salir"
+
+[connection signal="pressed" from="VolverInicio" to="." method="_on_VolverInicio_pressed"]
+[connection signal="pressed" from="Salir" to="." method="_on_Salir_pressed"]

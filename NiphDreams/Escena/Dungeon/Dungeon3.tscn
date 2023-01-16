@@ -1,6 +1,6 @@
-[gd_scene load_steps=72 format=2]
+[gd_scene load_steps=73 format=2]
 
-[ext_resource path="res://Escena/Personajes/Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Escena/Personajes/Player/Heroe.tscn" type="PackedScene" id=1]
 [ext_resource path="res://TileMaps/Objects/Wall.png" type="Texture" id=2]
 [ext_resource path="res://TileMaps/Objects/Decor0.png" type="Texture" id=3]
 [ext_resource path="res://TileMaps/Items/Chest0.png" type="Texture" id=4]
@@ -13,6 +13,7 @@
 [ext_resource path="res://Escena/Personajes/Enemigo/Boss.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Escena/Personajes/Enemigo/Demonio.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Escena/Personajes/Enemigo/Goblin.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Escena/CambiasEscenas/Portal.tscn" type="PackedScene" id=14]
 
 [sub_resource type="TileSet" id=1]
 0/name = "Floor.png 0"
@@ -1258,49 +1259,53 @@ shape = SubResource( 57 )
 position = Vector2( -85.5, 444.5 )
 shape = SubResource( 58 )
 
-[node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 520, 542 )
+[node name="Heroe" parent="." groups=["Saved"] instance=ExtResource( 1 )]
+position = Vector2( 29, 16 )
 
 [node name="GUI" parent="." instance=ExtResource( 9 )]
 
-[node name="Boss" parent="." instance=ExtResource( 11 )]
+[node name="Boss" parent="." groups=["Saved"] instance=ExtResource( 11 )]
 position = Vector2( 153, -9 )
 
-[node name="Goblin" parent="." instance=ExtResource( 13 )]
+[node name="Goblin" parent="." groups=["Saved"] instance=ExtResource( 13 )]
 position = Vector2( -263, -63 )
 
-[node name="Goblin3" parent="." instance=ExtResource( 13 )]
+[node name="Goblin3" parent="." groups=["Saved"] instance=ExtResource( 13 )]
 position = Vector2( -518, 147 )
 
-[node name="Goblin4" parent="." instance=ExtResource( 13 )]
+[node name="Goblin4" parent="." groups=["Saved"] instance=ExtResource( 13 )]
 position = Vector2( -321, 529 )
 
-[node name="Goblin5" parent="." instance=ExtResource( 13 )]
+[node name="Goblin5" parent="." groups=["Saved"] instance=ExtResource( 13 )]
 position = Vector2( -192, 549 )
 
-[node name="Goblin6" parent="." instance=ExtResource( 13 )]
+[node name="Goblin6" parent="." groups=["Saved"] instance=ExtResource( 13 )]
 position = Vector2( 481, 313 )
 
-[node name="Goblin7" parent="." instance=ExtResource( 13 )]
+[node name="Goblin7" parent="." groups=["Saved"] instance=ExtResource( 13 )]
 position = Vector2( 600, 275 )
 
-[node name="Goblin8" parent="." instance=ExtResource( 13 )]
+[node name="Goblin8" parent="." groups=["Saved"] instance=ExtResource( 13 )]
 position = Vector2( 543, 47 )
 
-[node name="Demonio" parent="." instance=ExtResource( 12 )]
+[node name="Demonio" parent="." groups=["Saved"] instance=ExtResource( 12 )]
 position = Vector2( 434, 247 )
 
-[node name="Demonio2" parent="." instance=ExtResource( 12 )]
+[node name="Demonio2" parent="." groups=["Saved"] instance=ExtResource( 12 )]
 position = Vector2( 520, 226 )
 
-[node name="Demonio3" parent="." instance=ExtResource( 12 )]
+[node name="Demonio3" parent="." groups=["Saved"] instance=ExtResource( 12 )]
 position = Vector2( -165, 462 )
 
-[node name="Demonio6" parent="." instance=ExtResource( 12 )]
+[node name="Demonio6" parent="." groups=["Saved"] instance=ExtResource( 12 )]
 position = Vector2( -110, 20 )
 
-[node name="Demonio4" parent="." instance=ExtResource( 12 )]
+[node name="Demonio4" parent="." groups=["Saved"] instance=ExtResource( 12 )]
 position = Vector2( -287, 468 )
 
-[node name="Demonio5" parent="." instance=ExtResource( 12 )]
+[node name="Demonio5" parent="." groups=["Saved"] instance=ExtResource( 12 )]
 position = Vector2( -433, 137 )
+
+[node name="Dungeon2" parent="." instance=ExtResource( 14 )]
+position = Vector2( 520, 588 )
+escena = "Dungeon2"

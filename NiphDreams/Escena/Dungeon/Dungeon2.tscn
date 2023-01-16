@@ -1,12 +1,13 @@
-[gd_scene load_steps=69 format=2]
+[gd_scene load_steps=70 format=2]
 
 [ext_resource path="res://TileMaps/Objects/Wall.png" type="Texture" id=1]
 [ext_resource path="res://TileMaps/Objects/Floor.png" type="Texture" id=2]
-[ext_resource path="res://Escena/Personajes/Player/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Escena/Personajes/Player/Heroe.tscn" type="PackedScene" id=3]
 [ext_resource path="res://TileMaps/Objects/Decor0.png" type="Texture" id=4]
 [ext_resource path="res://Escena/Personajes/Enemigo/Demonio.tscn" type="PackedScene" id=5]
 [ext_resource path="res://TileMaps/Items/Chest1.png" type="Texture" id=6]
 [ext_resource path="res://TileMaps/Objects/sewer_1.png" type="Texture" id=7]
+[ext_resource path="res://Escena/CambiasEscenas/Portal.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Escena/Menus/GUI.tscn" type="PackedScene" id=9]
 
 [sub_resource type="TileSet" id=2]
@@ -573,7 +574,7 @@ tile_data = PoolIntArray( -1966065, 28, 0, -1966064, 29, 0, -1966063, 29, 0, -19
 
 [node name="GUI" parent="." instance=ExtResource( 9 )]
 
-[node name="Player" parent="." instance=ExtResource( 3 )]
+[node name="Heroe" parent="." groups=["Saved"] instance=ExtResource( 3 )]
 position = Vector2( -441, -74 )
 
 [node name="Colisiones" type="Node2D" parent="."]
@@ -940,41 +941,51 @@ shape = SubResource( 66 )
 position = Vector2( 226, 148 )
 shape = SubResource( 66 )
 
-[node name="Demonio" parent="." instance=ExtResource( 5 )]
+[node name="Demonio" parent="." groups=["Saved"] instance=ExtResource( 5 )]
 position = Vector2( -511, 29 )
 
-[node name="Demonio2" parent="." instance=ExtResource( 5 )]
+[node name="Demonio2" parent="." groups=["Saved"] instance=ExtResource( 5 )]
 position = Vector2( -352, 19 )
 
-[node name="Demonio3" parent="." instance=ExtResource( 5 )]
+[node name="Demonio3" parent="." groups=["Saved"] instance=ExtResource( 5 )]
 position = Vector2( -430, 413 )
 
-[node name="Demonio13" parent="." instance=ExtResource( 5 )]
+[node name="Demonio13" parent="." groups=["Saved"] instance=ExtResource( 5 )]
 position = Vector2( -499, 364 )
 
-[node name="Demonio4" parent="." instance=ExtResource( 5 )]
+[node name="Demonio4" parent="." groups=["Saved"] instance=ExtResource( 5 )]
 position = Vector2( -359, 387 )
 
-[node name="Demonio5" parent="." instance=ExtResource( 5 )]
+[node name="Demonio5" parent="." groups=["Saved"] instance=ExtResource( 5 )]
 position = Vector2( -497, 515 )
 
-[node name="Demonio6" parent="." instance=ExtResource( 5 )]
+[node name="Demonio6" parent="." groups=["Saved"] instance=ExtResource( 5 )]
 position = Vector2( -351, 524 )
 
-[node name="Demonio7" parent="." instance=ExtResource( 5 )]
+[node name="Demonio7" parent="." groups=["Saved"] instance=ExtResource( 5 )]
 position = Vector2( 263, 109 )
 
-[node name="Demonio8" parent="." instance=ExtResource( 5 )]
+[node name="Demonio8" parent="." groups=["Saved"] instance=ExtResource( 5 )]
 position = Vector2( 144, 64 )
 
-[node name="Demonio9" parent="." instance=ExtResource( 5 )]
+[node name="Demonio9" parent="." groups=["Saved"] instance=ExtResource( 5 )]
 position = Vector2( 672, -29 )
 
-[node name="Demonio10" parent="." instance=ExtResource( 5 )]
+[node name="Demonio10" parent="." groups=["Saved"] instance=ExtResource( 5 )]
 position = Vector2( 499, 345 )
 
-[node name="Demonio11" parent="." instance=ExtResource( 5 )]
+[node name="Demonio11" parent="." groups=["Saved"] instance=ExtResource( 5 )]
 position = Vector2( 631, 297 )
 
-[node name="Demonio12" parent="." instance=ExtResource( 5 )]
+[node name="Demonio12" parent="." groups=["Saved"] instance=ExtResource( 5 )]
 position = Vector2( 583, 348 )
+
+[node name="Dungeon1" parent="." instance=ExtResource( 8 )]
+position = Vector2( -440, -112 )
+scale = Vector2( 2, 1 )
+escena = "Dungeon1"
+
+[node name="Dungeon2" parent="." instance=ExtResource( 8 )]
+position = Vector2( 567, 241 )
+scale = Vector2( 2, 1 )
+escena = "Dungeon3"

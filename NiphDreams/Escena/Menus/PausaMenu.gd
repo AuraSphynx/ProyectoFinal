@@ -8,6 +8,7 @@ func _ready():
 	
 func _unhandled_input(event):
 	if event.is_action_pressed("Pausa"):
+		get_node("Sonido").play()
 		self.is_paused = !is_paused
 
 func set_is_paused(value):
@@ -15,8 +16,6 @@ func set_is_paused(value):
 	get_tree().paused = is_paused
 	visible = is_paused
 
-func _on_Guardar_pressed():
-	pass # Replace with function body.
 
 func _on_Salir_pressed():
 	get_tree().quit()

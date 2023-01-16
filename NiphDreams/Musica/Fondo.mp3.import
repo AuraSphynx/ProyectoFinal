@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Fondo.mp3-38645e6770987417b6dd343776361803.mp3str"
+
+[deps]
+
+source_file="res://Musica/Fondo.mp3"
+dest_files=[ "res://.import/Fondo.mp3-38645e6770987417b6dd343776361803.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
