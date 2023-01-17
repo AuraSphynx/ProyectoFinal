@@ -1260,7 +1260,7 @@ position = Vector2( -85.5, 444.5 )
 shape = SubResource( 58 )
 
 [node name="Heroe" parent="." groups=["Saved"] instance=ExtResource( 1 )]
-position = Vector2( 29, 16 )
+position = Vector2( 526, 509 )
 
 [node name="GUI" parent="." instance=ExtResource( 9 )]
 
