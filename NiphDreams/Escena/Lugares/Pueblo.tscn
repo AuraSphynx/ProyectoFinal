@@ -2256,10 +2256,6 @@ shape = SubResource( 11 )
 position = Vector2( 240, 168 )
 shape = SubResource( 12 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Colisiones/Posada"]
-position = Vector2( 104, 136 )
-shape = SubResource( 69 )
-
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Colisiones/Posada"]
 position = Vector2( 71, 136 )
 shape = SubResource( 69 )
@@ -2854,8 +2850,6 @@ shape = SubResource( 61 )
 position = Vector2( 652, 169 )
 shape = SubResource( 61 )
 
-[node name="CollisionShape2D49" type="CollisionShape2D" parent="Colisiones/Objeto"]
-
 [node name="GUI" parent="." instance=ExtResource( 16 )]
 
 [node name="Heroe" parent="." groups=["Saved"] instance=ExtResource( 7 )]
@@ -2882,7 +2876,7 @@ position = Vector2( 295, 134 )
 position = Vector2( 295, 65 )
 
 [node name="Mirimi" parent="NPC_Posada" instance=ExtResource( 17 )]
-position = Vector2( 105, 135 )
+position = Vector2( 104, 135 )
 
 [node name="NPC_Casa1" type="Node" parent="."]
 

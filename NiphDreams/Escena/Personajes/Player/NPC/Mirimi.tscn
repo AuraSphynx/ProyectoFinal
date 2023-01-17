@@ -57,7 +57,7 @@ shape = SubResource( 6 )
 
 [node name="Gui_Dialogo" type="CanvasLayer" parent="."]
 script = ExtResource( 3 )
-d_file = "res://Escena/Dialogos/Json/dialogoMir.json"
+d_file = "res://Escena/Dialogos/Json/dialogoMirimi.json"
 
 [node name="NinePatchRect" type="NinePatchRect" parent="Gui_Dialogo"]
 margin_left = 29.0

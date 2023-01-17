@@ -3,9 +3,7 @@ extends Control
 var is_paused = false setget set_is_paused
 
 
-func _ready():
-	$VBoxContainer/Guardar.grab_focus() # Para que use el teclado
-	
+
 func _unhandled_input(event):
 	if event.is_action_pressed("Pausa"):
 		get_node("Sonido").play()

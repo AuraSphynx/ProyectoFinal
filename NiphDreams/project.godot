@@ -90,10 +90,6 @@ config/name="NiphDreams"
 run/main_scene="res://Escena/Menus/MenuPrincipal.tscn"
 config/icon="res://icon.png"
 
-[autoload]
-
-SaveLoad="*res://SaveLoad.gd"
-
 [display]
 
 window/size/width=320
