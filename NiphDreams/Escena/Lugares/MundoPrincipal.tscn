@@ -1365,7 +1365,7 @@ position = Vector2( 248, 128 )
 shape = SubResource( 59 )
 
 [node name="Heroe" parent="." groups=["Saved"] instance=ExtResource( 2 )]
-position = Vector2( 215, 169 )
+position = Vector2( -520, -162 )
 
 [node name="GUI" parent="." instance=ExtResource( 6 )]
 
@@ -1389,7 +1389,7 @@ position = Vector2( -654, 143 )
 scale = Vector2( 4, 1 )
 escena = "Aldea2"
 
-[node name="Dungeon" parent="." instance=ExtResource( 7 )]
-position = Vector2( -536, -268 )
-scale = Vector2( 2, 1 )
+[node name="Dungeon1" parent="." instance=ExtResource( 7 )]
+position = Vector2( -536, -264 )
+scale = Vector2( 4, 1 )
 escena = "Dungeon1"

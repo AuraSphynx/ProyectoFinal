@@ -216,6 +216,7 @@ start_node = "Parado"
 [sub_resource type="AnimationNodeStateMachinePlayback" id=12]
 
 [sub_resource type="CircleShape2D" id=26]
+radius = 10.0499
 
 [sub_resource type="Animation" id=27]
 resource_name = "ataque"
@@ -290,7 +291,7 @@ tree_root = SubResource( 11 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/playback = SubResource( 12 )
-parameters/Caminar/blend_position = Vector2( 0.00624442, 0.00862074 )
+parameters/Caminar/blend_position = Vector2( -0.0285261, 0.155172 )
 parameters/Parado/blend_position = Vector2( -0.000892043, 0.155172 )
 
 [node name="Camera2D" type="Camera2D" parent="."]

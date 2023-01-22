@@ -34,5 +34,3 @@ func _unhandled_input(event: InputEvent):
 	if event.is_action_pressed("atacar"):
 		get_node("Punch").play()
 		atacar.atacar()
-
-
